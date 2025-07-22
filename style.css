@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container{
+  max-width: 1280px;
+  margin: auto;
+}
+
+.btn{
+  background-color: #d00;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
+
+/* header section */
+
+.banner{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  margin: 50px auto;
+}
+
+.banner-left{
+color: white;
+padding-left: 70px;
+
+}
+
+.banner-left h2{
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 70px;
+}
+
+.banner-left p{
+  font-weight: 500;
+  max-width: 540px;
+  padding: 20px 0px;
+}
+.banner-right img{
+  display: block;
+}
+
+/* up coming matches */
+
+.upcoming-matches{
+  display: flex;
+  padding: 50px 0px;
+  gap: 20px;
+}
+.upcoming-matches-left{
+background-color: rgb(0, 0, 0);
+width: 25%;
+border-radius: 15px;
+padding: 15px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+height: fit-content;
+}
+
+.upcoming-matches-left .btn:nth-child(1), 
+.upcoming-matches-left .btn:nth-child(2){
+  background-color: white;
+  color: black;
+}
+
+.upcoming-matches-right{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  flex: 1;
+}
+
+.card{
+  border: 1px solid rgb( 232, 232, 232);
+  border-radius: 10px;
+}
+.card img{
+height: 180px;
+width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .btn{
+  margin-top: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.card h2{
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-bottom{
+  display: flex;
+  gap: 20px;
+}
+
+.card-body{
+  padding: 20px;
+}

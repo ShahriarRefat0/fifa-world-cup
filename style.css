@@ -23,6 +23,40 @@ img {
   max-width: 100%;
 }
 
+/* Animation */
+@keyframes banner-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-20px);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes banner-player-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-20px);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
 
 /* header section */
 
@@ -32,6 +66,7 @@ img {
   align-items: center;
   border-radius: 15px;
   margin: 50px auto;
+  animation: banner-animation 0.7s ease-out forwards;
 }
 
 .banner-left {
@@ -54,6 +89,7 @@ img {
 
 .banner-right img {
   display: block;
+  animation: banner-player-animation 1s ease-in forwards;
 }
 
 /* up coming matches */
@@ -121,10 +157,45 @@ img {
   padding: 20px;
 }
 
+/* footer section style */
+
+footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.goal {
+  font-size: 28px;
+  margin-top: 100px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(88, 86, 86);
+  width: 1200px;
+  text-align: center;
+}
+
+.footer-options {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.footer-options a {
+  text-decoration: none;
+  color: rgb(181, 180, 180);
+}
+
+
 /* responsive style */
 
 @media screen and (max-width: 992px) {
-  .container{
+  .container {
     margin: 0 20px;
   }
 
@@ -154,15 +225,21 @@ img {
   .upcoming-matches-right {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .goal {
+    border-bottom: 1px solid rgb(88, 86, 86);
+    width: 600px;
+  }
 }
 
 
 /* MOBILE RESPONSIVE  */
 
 @media screen and (max-width: 764px) {
-    .container {
-        margin: 0 10px;
-      }
+  .container {
+    margin: 0 10px;
+  }
+
   .banner {
     flex-direction: column;
     text-align: center;
@@ -178,7 +255,17 @@ img {
     margin: 15px auto;
   }
 
-    .upcoming-matches-right{
+  .upcoming-matches-right {
     grid-template-columns: repeat(1, 1fr);
   }
+
+        .footer-options {
+          grid-template-columns: repeat(2, 1fr);
+        }
+  .goal {
+    border-bottom: 1px solid rgb(88, 86, 86);
+    width: 300px;
+  }
+
+
 }
